@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -j Hello world
+#SBATCH -J helloworld
 #SBATCH -N 2
 #SBATCH --ntasks-per-node=2
 
