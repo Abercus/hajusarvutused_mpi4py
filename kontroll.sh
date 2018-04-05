@@ -1,14 +1,18 @@
 #!/bin/bash
 
-# Töö nimi on HelloWorld
+# TÃ¶Ã¶ nimi on HelloWorld
 #SBATCH -J HelloWorld
-# See töö nõuab kahte arvutussõlme
+# See tÃ¶Ã¶ nÃµuab kahte arvutussÃµlme
 #SBATCH -N 2
-# Mitu tööülesannet sõlme kohta
+# Mitu tÃ¶Ã¶Ã¼lesannet sÃµlme kohta
 #SBATCH --ntasks-per-node=2
 # Kokku 4 protsessi.
-# Väljundfail
+# VÃ¤ljundfail
 #SBATCH --output=kontroll.out
+# arvutusaeg
+#SBATCH --time=00:10:00
+# testime jÃ¤rjekorda
+#SBATCH -p testing
 
 # Vajalike moodulite laadimine.
 module purge
@@ -23,3 +27,5 @@ export PYTHONPATH=$HOME/$MPI4PYDIR/install/lib/python
 
 # Jooksutame kasutades mpi'd.
 mpirun python helloWorld/helloworld.py
+
+
