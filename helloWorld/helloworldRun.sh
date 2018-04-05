@@ -2,6 +2,8 @@
 #SBATCH -J helloworld
 #SBATCH -N 2
 #SBATCH --ntasks-per-node=2
+#SBATCH --time=00:10:00
+#SBATCH -p testing
 
 module purge
 module load openmpi-1.7.3
